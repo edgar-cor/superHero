@@ -4,6 +4,10 @@
     xmlns:tools="http://schemas.android.com/tools">
 
     <data>
+        
+        <variable
+            name="superHero"
+            type="com.example.myheroapp.Superhero" />
 
     </data>
 
@@ -20,7 +24,7 @@
             android:layout_marginStart="16dp"
             android:layout_marginTop="20dp"
             android:layout_marginEnd="16dp"
-            android:text="Short bio"
+            android:text="@{superHero.bios}"
             android:textColor="#121111"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
@@ -56,7 +60,7 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:padding="16dp"
-            android:text="Iron man"
+            android:text="@{superHero.name}"
             android:textColor="@color/black"
             app:autoSizeMaxTextSize="20sp"
             app:layout_constraintEnd_toEndOf="parent"
@@ -69,7 +73,7 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
             android:layout_marginEnd="16dp"
-            android:text="Alter ego"
+            android:text="@{superHero.bios}"
             android:textSize="12sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -111,6 +115,7 @@
             android:layout_height="wrap_content"
             android:layout_marginBottom="80dp"
             android:isIndicator="true"
+            android:rating="@{superHero.power}"
             android:progressTint="#FFEB3B"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
